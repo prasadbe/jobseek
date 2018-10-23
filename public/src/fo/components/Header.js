@@ -25,7 +25,7 @@ class Header extends React.Component{
    render() {
      
      
-       return (<div className="wrapper">
+       return (<div className="wrapper headWrapper">
                 <h2>Job Seek</h2>
                 
                 <nav className="tabs">

@@ -26,7 +26,7 @@ class Product extends React.Component{
    }
 
    render() {
-       return (<div className="wrapper-list">
+       return (<div className="wrapper-list productWrapper">
                   {this.props.products.list.map((val) => {
                         return <div className="wrapper"  key={val.productId}><nav className="tabs">
                                 <a href="javascript:void(0);">{val.name}</a>

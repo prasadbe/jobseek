@@ -88,13 +88,11 @@ class Cart {
                     if(val_p.qty % val.buy_qty == 0) {
                         cart.f_qty = Math.ceil(val_p.qty / val.buy_qty) * (val.buy_qty + val.get_qty)  - val_p.qty;
 
-                        val_p.qty = Math.ceil(val_p.qty / val.buy_qty) * (val.buy_qty + val.get_qty);
+                        cart.qty = Math.ceil(val_p.qty / val.buy_qty) * (val.buy_qty + val.get_qty);
                         total += cart.f_qty * val_p.price;
 
                         
                     }
-                    cart.qty = val_p.qty;
-
                     cart.price = cart.qty * val_p.price;
                     console.log(cart.price );
 

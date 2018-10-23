@@ -34,8 +34,7 @@ class Cart extends React.Component{
                 <nav className="tabs">
                   <div className="selector"></div>
                   <a href="javascript:void(0);">Name</a>
-                  <a href="javascript:void(0);">Purchased Qty</a>
-                  <a href="javascript:void(0);">Free Qty</a>
+                  <a href="javascript:void(0);">Qty / Free Qty</a>
                   <a href="javascript:void(0);">Price</a>
                   <a href="javascript:void(0);">Discount</a>
                   <a href="javascript:void(0);">Total</a>
@@ -47,8 +46,7 @@ class Cart extends React.Component{
                         return <nav className="tabs" key={val.id}>
                                 <div className="selector"></div>
                                 <a href="javascript:void(0);">{val.name}</a>
-                                <a href="javascript:void(0);">{val.qty}</a>
-                                <a href="javascript:void(0);">{val.f_qty}</a>
+                                <a href="javascript:void(0);">{val.qty} / {val.f_qty}</a>
                                 <a href="javascript:void(0);">$ {parseFloat(val.price).toFixed(2)}</a>
                                 <a href="javascript:void(0);">$ {parseFloat(val.discount).toFixed(2)}</a>
                                 <a href="javascript:void(0);">$ {parseFloat(val.price - val.discount).toFixed(2)}</a>
