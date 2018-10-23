@@ -49,15 +49,15 @@ class Cart extends React.Component{
                                 <a href="javascript:void(0);">{val.name}</a>
                                 <a href="javascript:void(0);">{val.qty}</a>
                                 <a href="javascript:void(0);">{val.f_qty}</a>
-                                <a href="javascript:void(0);">$ {val.price}</a>
-                                <a href="javascript:void(0);">$ {val.discount}</a>
+                                <a href="javascript:void(0);">$ {parseFloat(val.price).toFixed(2)}</a>
+                                <a href="javascript:void(0);">$ {parseFloat(val.discount).toFixed(2)}</a>
                                 <a href="javascript:void(0);">$ {parseFloat(val.price - val.discount).toFixed(2)}</a>
                                </nav>
                    } )}
 
-                   <div> Price : {price}</div>
-                   <div> Discount : {discount}</div>
-                   <div> Totak : {parseFloat(total).toFixed(2)}</div>
+                   <div className="endCart"> Price : {parseFloat(price).toFixed(2)}</div>
+                   <div className="endCart"> Discount : {parseFloat(discount).toFixed(2)}</div>
+                   <div className="endCart"> Total : {parseFloat(total).toFixed(2)}</div>
               </div> :  <div>
                 <h2>Empty Cart</h2> </div>}
               </div>);

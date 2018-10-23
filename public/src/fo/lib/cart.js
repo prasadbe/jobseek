@@ -89,8 +89,14 @@ class Cart {
                         cart.f_qty = Math.ceil(val_p.qty / val.buy_qty) * (val.buy_qty + val.get_qty)  - val_p.qty;
 
                         val_p.qty = Math.ceil(val_p.qty / val.buy_qty) * (val.buy_qty + val.get_qty);
+                        total += cart.f_qty * val_p.price;
+
+                        
                     }
                     cart.qty = val_p.qty;
+
+                    cart.price = cart.qty * val_p.price;
+                    console.log(cart.price );
 
                 } else if(val_p.qty >= val.min_qty) {
                     discount += val_p.qty * val.discount_price;
@@ -102,6 +108,7 @@ class Cart {
                     if(val_cart.id == cart.id) {
                         val_cart.f_qty = cart.f_qty;
                         val_cart.discount = cart.discount;
+                        val_cart.price = cart.price;
                     } 
                 });
             });

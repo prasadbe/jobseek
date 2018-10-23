@@ -16,7 +16,7 @@ app.use(function(req, res, next) {
         } else {
             console.log(result);
             global.manifest = JSON.parse(result);
-        }
+        } 
         next();
     });
 });
