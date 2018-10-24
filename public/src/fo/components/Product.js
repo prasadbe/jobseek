@@ -4,7 +4,7 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 
 import { injectIntl, intlShape, FormattedRelative } from 'react-intl'
-import curryRight from 'lodash/curryright'
+import curryRight from 'lodash.curryright'
 
 
 class Product extends React.Component{

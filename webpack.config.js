@@ -97,7 +97,7 @@ const getEntryFiles = function () {
   var entry = new Object();
   entry.fo = [path.resolve(__dirname, 'public/src/fo/index.js')]
   entry.vendor = [
-    'react', 'lodash/curryright', 'redux', 'react-redux', 'react-dom', 'react-router', 'react-router-redux', 'redux-thunk'
+    'react', 'lodash.curryright', 'redux', 'react-redux', 'react-dom', 'react-router', 'react-router-redux', 'redux-thunk'
   ]
   isDevelopment && entry.fo.push('react-hot-loader/patch')
   return entry

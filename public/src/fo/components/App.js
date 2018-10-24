@@ -7,7 +7,7 @@ import Cart from './Cart';
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { injectIntl, intlShape, FormattedRelative } from 'react-intl'
-import curryRight from 'lodash/curryright'
+import curryRight from 'lodash.curryright'
 import './../style/main.less';
 class App extends React.Component {
 
