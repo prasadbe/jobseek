@@ -28,7 +28,7 @@ Application Doubts :
  
  To run the migration & seeders instead import db
  
- change .env file in another location (app/config/config.js)
+ change .env file in another location (app/config/.env)
  
  then follow below steps
  
