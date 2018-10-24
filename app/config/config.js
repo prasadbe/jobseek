@@ -1,3 +1,6 @@
+require('dotenv').config({
+  path: __dirname+'/.env'
+}); 
 module.exports = {
   logging: false,
   database: process.env.DB_DATABASE || 'jobseek',
