@@ -16,7 +16,7 @@ React, Redux, Node, Mysql (sequelize npm), Webpack
 
 Application Doubts :
 
-* To remove item from cart, please update the quantity with zero
+* To remove item from cart, please update the quantity  of the cart product is zero
 
 
 * According to rule . If user get 1 qty if user added 4 qty in cart ...
