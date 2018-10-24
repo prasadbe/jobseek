@@ -14,3 +14,16 @@ Technologies used  :
 
 React, Redux, Node, Mysql (sequelize npm), Webpack
 
+Application Doubts :
+
+* To remove item from cart, please update the quantity with zero
+
+
+* According to rule . If user get 1 qty if user added 4 qty in cart ...
+
+ User tried to purchase 8 qty means am offering 2 qty extra with same 8 qty price
+ 
+ 
+ 
+
+
