@@ -19,9 +19,11 @@ Application Doubts :
 * To remove item from cart, please update the quantity  of the cart product is zero
 
 
-* According to rule .  User will get 1 qty if User added 4 qty in cart ...
+* According to rule  User will get 1 qty free if User purchased 4 qty in cart ... 
 
- User tried to purchase 8 qty means am offering 2 qty extra with same 8 qty price
+  IN that scenario we offering below format
+
+ `User tried to purchase 8 qty means am offering 2 qty extra with same 8 qty price`
  
  
  DB Migrations
