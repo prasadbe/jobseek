@@ -17,7 +17,7 @@ RUN apt-get update
 COPY ./ /var/www/html/
 RUN npm cache clean --force
 RUN npm install 
-
+RUN npm install webpack -g
 RUN webpack -p 
 EXPOSE 3000
 
