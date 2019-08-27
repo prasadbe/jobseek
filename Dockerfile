@@ -12,7 +12,7 @@ RUN apt-get update
 RUN apt-cache search mysql | grep mysql | more
 RUN apt-get install   mysql-common
 
-RUN apt-get mysql mysqldump
+RUN apt-get install mysql mysqldump mysql-server
 RUN /etc/init.d/mysql start
 RUN mysql -u root --password=""  -e "CREATE USER 'jobseek'@'localhost' IDENTIFIED BY 'jobseek'; ";
 RUN mysql -u jobseek --password="jobseek" -e "CREATE DATABASE jobseek; GRANT ALL PRIVILEGES ON *.* TO 'jobseek'@'localhost' IDENTIFIED BY 'jobseek'";
