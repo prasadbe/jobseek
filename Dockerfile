@@ -11,11 +11,13 @@ ENV UNITY_TOKEN=Uty99iAowuaWGu7hxsS1RjOx4nk6vkemZ4hKCG00
 RUN apt-get update
 RUN apt-cache search mysql | grep mysql | more
 RUN apt-get install   mysql-common
+
+RUN apt-get mysql mysqldump
+RUN /etc/init.d/mysql start
 RUN mysql -u root --password=""  -e "CREATE USER 'jobseek'@'localhost' IDENTIFIED BY 'jobseek'; ";
 RUN mysql -u jobseek --password="jobseek" -e "CREATE DATABASE jobseek; GRANT ALL PRIVILEGES ON *.* TO 'jobseek'@'localhost' IDENTIFIED BY 'jobseek'";
 RUN mysql -u jobseek --password="jobseek" -e "USE jobseek;";
 RUN mysql -u jobseek ---password="jobseek" -D lba < dump.sql;
-
 # Install NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs 

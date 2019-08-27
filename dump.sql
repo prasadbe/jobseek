@@ -120,7 +120,9 @@ CREATE TABLE `SequelizeMeta` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
+/*docker stop $(docker ps  --all -f "name=jobseek"  -aq)
+docker container rm $(docker ps  --all -f "name=jobseek"  -aq)
+docker  rmi --force $(docker images  -f "name=jobseek"  -aq) */
 --
 -- Dumping data for table `SequelizeMeta`
 --
