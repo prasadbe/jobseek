@@ -8,7 +8,7 @@ ENV APP_ROOT=$APP_DIR/public
 ENV GENERATE_MANIFEST=true
 ENV UNITY_URL=https://unity.krds.com
 ENV UNITY_TOKEN=Uty99iAowuaWGu7hxsS1RjOx4nk6vkemZ4hKCG00
-
+RUN apt-get update
 RUN apt-get install mysql mysqldump mysql-server
 RUN /etc/init.d/mysql start
 RUN mysql -u root --password=""  -e "CREATE USER 'jobseek'@'localhost' IDENTIFIED BY 'jobseek'; ";
