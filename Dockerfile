@@ -15,7 +15,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs 
 RUN apt-get update
 COPY ./ /var/www/html/
-
+RUN npm cache clean
 RUN npm install 
 
 RUN webpack -p 
