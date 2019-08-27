@@ -19,7 +19,7 @@ RUN npm cache clean --force
 RUN npm install 
 
 RUN webpack -p 
-EXPOSE 9000
+EXPOSE 3000
 
 CMD ["node", "index"]
 
