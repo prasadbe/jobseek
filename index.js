@@ -1,30 +1,21 @@
 require('dotenv').config({
-  path: process.env.DOTENV || '.env'
+    path: process.env.DOTENV || '.env'
 });
 var express = require('express');
 var app = express();
 var fs = require('fs');
-var models = require('./app/models');
-var modelAssociation = require('./app/modelAssociations');
-var customerRoutes = require('./app/routes/customers');
-var productRoutes = require('./app/routes/products');
-var offerRoutes = require('./app/routes/offers');
 app.use(function(req, res, next) {
-    fs.readFile(__dirname+'/build/webpack-manifest.json', 'UTF-8', function(err, result) {
-        if(err) {
+    fs.readFile(__dirname + '/build/webpack-manifest.json', 'UTF-8', function(err, result) {
+        if (err) {
             console.log(err)
         } else {
             console.log(result);
             global.manifest = JSON.parse(result);
-        } 
+        }
         next();
     });
 });
 app.use(express.static('build'))
-modelAssociation();
-app.use('/customers', customerRoutes(express.Router()));
-app.use('/products', productRoutes(express.Router()));
-app.use('/offers', offerRoutes(express.Router()));
 app.use('/', (req, res) => {
     var manifest = global.manifest;
     const ogUrl = process.env.APP_URL || 'http://localhost:8000'
@@ -49,7 +40,7 @@ app.use('/', (req, res) => {
         <script src="${ogUrl}${manifest['fo.js']}"></script>
     </body>
     </html>`;
-    
+
 
     res.send(html);
     res.end();
