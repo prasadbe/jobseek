@@ -19,7 +19,8 @@ RUN  /etc/init.d/mysql start
 RUN sleep 5;
 RUN ls -l /var/run/ | grep mysqld
 
-
+#sudo docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
+#sudo docker images  | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rmi
 # Install NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs 
